@@ -17,7 +17,7 @@ enem = (
     .option("header", True)
     .option("inferSchema", True)
     .option("delimiter", ";")
-    .options(encoding='ISO-8859-1')
+    .options(encoding='ISO-8859-1') ##.options(encoding='latin1')
     .load("s3://<caminho-lake>+<arquivo csv>")
 )
 
