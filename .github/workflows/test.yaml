@@ -1,6 +1,6 @@
 ## Codigo esteira deploy github
 
-name: Validate datalake infrastructure to deploy on Production
+name: Test on Production
 
 on:
   pull_request:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Validate datalake infrastructure to deploy on Production
+    name: Test on Production
     runs-on: ubuntu-latest
     
     steps:
