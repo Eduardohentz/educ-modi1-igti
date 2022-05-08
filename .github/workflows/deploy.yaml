@@ -1,3 +1,5 @@
+## Codigo esteira deploy github
+
 name: Deploy
 
 on:
@@ -12,20 +14,21 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Setup Python 3.10
+    - name: Setup Python 3.10.4
       uses: actions/setup-python@v2
       with:
-        python-version: 3.10
+        python-version: 3.10.4
 
     - name: HashiCorp - Setup Terraform
       uses: hashicorp/setup-terraform@v1.2.1
 
     - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credencials@v1
+      uses: aws-actions/configure-aws-credentials@v1
       with:
-        aws-access-key-id: ""
-        aws-secret-access-key: ""
-        aws_region: us-east-1
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws_region: ${{ var.aws_region }}
+        mask-aws-account-id: false
 
     - name: IaC Apply
       env:
