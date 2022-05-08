@@ -6,7 +6,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     bucket = "terraform-state-igti-jorge"
-    key = "state/igti/edc/mod1/terraform.tfstate"
+    key    = "state/igti/edc/mod1/terraform.tfstate"
     region = "us-east-1"
   }
 }
