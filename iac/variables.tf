@@ -1,5 +1,4 @@
 # Lista de variaveis utilizadas nos arquivos de terraform
-
 variable "base_bucket_name" {
   default = "datalake-igti-tf"
 }
