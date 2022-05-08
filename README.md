@@ -1,4 +1,4 @@
-﻿# (igti-edc-mod1-code) Trabalho Desafio Modulo 1 - MBA Engenharia de dados 2022 - Bootcampo EDC - IGTI
+# Trabalho Desafio Modulo 1 - MBA Engenharia de dados 2022 - Bootcampo EDC - IGTI
 
 Repositório utilizado para o trabalho mod1 do curso MBA em engenharia de dados - Bootcampo Engenharia de dados Cloud - da IGTI.
 
