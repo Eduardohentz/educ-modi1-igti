@@ -1,6 +1,6 @@
 ## Codigo esteira deploy github
 
-name: Deploy
+name: Deploy Datalake
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to  Datalake
+    name: Deploy Datalake
     runs-on: ubuntu-latest
     
     steps:
