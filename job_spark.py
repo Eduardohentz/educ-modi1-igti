@@ -28,5 +28,5 @@ enem = (
     .mode("overwrite")
     .format("parquet")
     .partitionBy("NU_ANO")
-    .save("s3://<caminho-lake-repositorio-parquet>")
+    .save("s3://datalake-jorge-igti-tf-producao-431738431676/consumer-zone/")
 )

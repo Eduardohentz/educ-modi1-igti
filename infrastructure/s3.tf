@@ -3,7 +3,7 @@
 
 resource "aws_s3_bucket" "datalake" {
   # Parametros de configuracao do recurso escolhido
-  bucket = "${var.base_bucket_name}-jorge-${var.environment}-${var.account_number}"
+  bucket = "${var.base_bucket_name}-${var.environment}-${var.account_number}"
 
   lifecycle {
     ignore_changes = [server_side_encryption_configuration]
