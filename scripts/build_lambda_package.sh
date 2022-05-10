@@ -39,7 +39,7 @@ if [ -f $LAMBDA_FUNCTION ]
 then
     echo "================================================================"
     echo "Copiando funcao Handler..."
-    cp $LAMBDA_FUNCTION .
+    cp -f $LAMBDA_FUNCTION .
     echo "Compactando o arquivo lambda_function_payload.zip"
     zip -r9 ../lambda_function_payload.zip . ## Compacta o pacote para o deploy
     echo "Arquivo compactado com sucesso!"
