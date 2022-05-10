@@ -18,7 +18,7 @@ enem = (
     .option("inferSchema", True)
     .option("delimiter", ";")
     .options(encoding='ISO-8859-1')   ## .options(encoding='latin1')
-    .load("s3://datalake-jorge-igti-tf-producao-431738431676/raw-data/MICRODADOS_ENEM_2020.csv")
+    .load("s3://datalake-jorge-igti-tf-producao-431738431676/raw-data/enem/MICRODADOS_ENEM_2020.csv")
 )
 
 ## Grava dados em Parquet
@@ -28,5 +28,5 @@ enem = (
     .mode("overwrite")
     .format("parquet")
     .partitionBy("NU_ANO")
-    .save("s3://datalake-jorge-igti-tf-producao-431738431676/consumer-zone/")
+    .save("s3://datalake-jorge-igti-tf-producao-431738431676/staging/enem")
 )

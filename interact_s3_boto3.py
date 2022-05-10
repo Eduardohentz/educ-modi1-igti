@@ -27,18 +27,18 @@ file.extractall(path)
 s3 = boto3.client('s3')
 
 # Efetua download de um arquivo do AWS S3 para o disco local
-s3.download_file("datalake-jorge-igti-mba-engenharia-dados",
-                 "data/ITENS_PROVA_2020.csv",
-                 "data/ITENS_PROVA_2020.csv")
+# s3.download_file("datalake-jorge-igti-mba-engenharia-dados",
+#                  "data/ITENS_PROVA_2020.csv",
+#                  "data/ITENS_PROVA_2020.csv")
 
-csvFile = path + "/DADOS/MICRODADOS_ENEM_2020.csv";
-print (csvFile)
+# csvFile = path + "/DADOS/MICRODADOS_ENEM_2020.csv";
+# print (csvFile)
 
 # Le o arquivo csv e mostra em formato de tabela (separador ;)
-df = pd.read_csv(csvFile, encoding='utf8', sep=";")
-print(df)
+# df = pd.read_csv(csvFile, encoding='utf8', sep=";")
+# print(df)
 
 # Faz upload do arquivo MICRODADOS_ENEM_2020.csv para a pasta raw-data do AWS S3
 s3.upload_file("data/MICRODADOS_ENEM_2020.csv",
-              "datalake-jorge-igti-mba-engenharia-dados",
+              "datalake-jorge-igti-tf-producao-431738431676",
               "raw-data/MICRODADOS_ENEM_2020.csv")
