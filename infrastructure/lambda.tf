@@ -5,13 +5,13 @@ resource "aws_lambda_function" "executa_emr" {
   handler       = "lambda_function.handler"
   memory_size   = 128
   timeout       = 30
-}
 
-source_code_hash = filebase64sha256("lambda_function_payload.zip")
+  source_code_hash = filebase64sha256("lambda_function_payload.zip")
 
-runtime = "python3.10.4"
+  runtime = "python3.10.4"
 
-tags {
-  IES   = "IGTI"
-  CURSO = "EDC"
+  tags {
+    IES   = "IGTI"
+    CURSO = "EDC"
+  }
 }
