@@ -1,6 +1,6 @@
 ## Codigo esteira deploy github
 
-name: Test on Production
+name: Test on PR
 
 on:
   pull_request:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   test:
-    name: Test on Production
+    name: Test on PR
     runs-on: ubuntu-latest
     
     steps:
@@ -29,6 +29,10 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: us-east-1
         mask-aws-account-id: false
+        
+    - name: Build Lambda package
+      run: |
+        sh scripts/build_lambda_package.sh
 
     - name: IaC Apply
       env:
