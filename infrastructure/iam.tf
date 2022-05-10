@@ -55,7 +55,7 @@ resource "aws_iam_policy" "lambda" {
             ],
             "Resource": "*"
         },
-            {
+        {
             "Action": "iam:PassRole",
             "Resource": [
                 "arn:aws:iam::431738431676:role/EMR_DefaultRole",
@@ -71,7 +71,7 @@ resource "aws_iam_policy" "lambda" {
 EOF
 }
 
-resource "aws_iam_role_policy_attachment" "lambda-attach" {
+resource "aws_iam_role_policy_attachment" "lambda_attach" {
   role       = aws_iam_role.lambda.name
   policy_arn = aws_iam_role.lambda.arn
 }
