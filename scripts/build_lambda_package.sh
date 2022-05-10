@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
-cd infrastructure
+cd ../infrastructure
 
-# Declara variavel para reutilizacao nas validacoes di diretorio
+# Declara variavel para reutilizacao nas validacoes do diretorio
 PACKAGE="package"
 
 # Cria o diretorio e instala as dependencias da funcao lambda
-if [ -d $PACKAGE]
+if [ -d $PACKAGE ]
 then
     echo "O diretório "$PACKAGE" já existe."
 else
@@ -20,7 +20,7 @@ fi
 # Declara variavel qye localiza o requirements com as dependencias do projeto
 FILE_REQUIREMENTS=../etl/lambda_requirements.txt
 
-if [ -f $FILE_REQUIREMENTS]
+if [ -f $FILE_REQUIREMENTS ]
 then
     echo "================================================================"
     echo "Instalando dependencias localizadas no "$FILE_REQUIREMENTS""
@@ -35,11 +35,11 @@ cd $PACKAGE
 LAMBDA_FUNCTION=../../etl/lambda_function.py
 
 # Verifica se o arquivo lambda_function.py existe
-if [ -f $LAMBDA_FUNCTION]
+if [ -f $LAMBDA_FUNCTION ]
 then
     echo "================================================================"
     echo "Copiando funcao Handler..."
-    cd $LAMBDA_FUNCTION
+    cp $LAMBDA_FUNCTION .
     echo "Compactando o arquivo lambda_function_payload.zip"
     zip -r9 ../lambda_function_payload.zip . ## Compacta o pacote para o deploy
     echo "Arquivo compactado com sucesso!"
