@@ -18,7 +18,8 @@ enem = (
     .option("inferSchema", True)
     .option("header", True)
     .option("delimiter", ";")
-    .load("s3://datalake-ney-igti-edc/raw-data/enem")
+    .options(encoding='ISO-8859-1')
+    .load("s3://datalake-jorge-igti-edc/raw-data/enem")
 )
 
 # Escreve a tabela em staging em formato delta
@@ -28,6 +29,6 @@ print("Writing delta table...")
     .write
     .mode("overwrite")
     .format("delta")
-    .partitionBy("year")
-    .save("s3://datalake-ney-igti-edc-tf/staging-zone/enem")
+    .partitionBy("NU_ANO")
+    .save("s3://datalake-jorge-igti-tf-producao-431738431676/staging-zone/enem")
 )
