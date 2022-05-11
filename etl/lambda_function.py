@@ -33,7 +33,7 @@ def handler(event, context):
                     'Ec2KeyName': 'jorge-igti-teste',
                     'KeepJobFlowAliveWhenNoSteps': True,
                     'TerminationProtected': False,
-                    'Ec2SubnetId': 'subnet-0f4e715d8797df743'
+                    'Ec2SubnetId': 'subnet-024b7a9fb8fd6c47d'
                 },
 
                 Applications=[
