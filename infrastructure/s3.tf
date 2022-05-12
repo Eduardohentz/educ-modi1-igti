@@ -26,7 +26,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "config" {
 }
 
 resource "aws_s3_bucket" "stream" {
-  bucket = "igti-ney-streaming-bucket"
+  bucket = "igti-jorge-streaming-bucket-${var.account_number}"
 
   lifecycle {
     ignore_changes = [server_side_encryption_configuration]
