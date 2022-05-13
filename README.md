@@ -1,7 +1,7 @@
 # Trabalho Modulo 1 - MBA Engenharia de dados 2022 - Bootcamp EDC - IGTI
 
 [![Test on PR](https://github.com/jlsilva01/igti-edc-mod1-code/actions/workflows/test.yaml/badge.svg)](https://github.com/jlsilva01/igti-edc-mod1-code/actions/workflows/test.yaml)
-[![Deploy](https://github.com/neylsoncrepalde/igti-edc-mod1-code/actions/workflows/deploy.yaml/badge.svg)](https://github.com/jlsilva01/igti-edc-mod1-code/actions/workflows/deploy.yaml)
+[![Deploy](https://github.com/jlsilva01/igti-edc-mod1-code/actions/workflows/deploy.yaml/badge.svg)](https://github.com/jlsilva01/igti-edc-mod1-code/actions/workflows/deploy.yaml)
 
 ## Fundamentos de Arquitetura de Dados em Nuvem
 
